@@ -6,7 +6,7 @@ var connection = mysql.createConnection({
     host: "localhost",
     port: 3306,
     user: "root", //Your username
-    password: "Paswerd7?2790", //Your password
+    password: "", //Your password
     database: "bamazon"
 });
 
@@ -34,7 +34,6 @@ var start = function() {
   }).then(function(answer) {
     console.log(answer.makePurchase)
     if (answer.makePurchase == true){
-      console.log('WOO!');
       pickByItemID();
     } else{
       console.log('Have a great day! Come shop with us on payday!')
