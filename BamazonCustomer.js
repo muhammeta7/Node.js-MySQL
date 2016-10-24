@@ -1,4 +1,3 @@
-console.log('Dont forget to add password back');
 var mysql = require('mysql');
 var inquirer = require('inquirer');
 // var secret = require('./secret.js');
@@ -7,7 +6,7 @@ var connection = mysql.createConnection({
     host: "localhost",
     port: 3306,
     user: "root", //Your username
-    password: "", //Your password
+    password: "Paswerd7?2790", //Your password
     database: "bamazon"
 });
 
@@ -57,25 +56,27 @@ function start(){
         var cartTotal = (res[itemSelected].Price) * quantity;
         // Check inventory to see if there is enough stock available
         if (res[itemSelected].StockQuantity >= quantity){
-          console.log('You have successfully made your purchase. Your total is $' + cartTotal + '.00. Your item(s) will be shipped within 2 business days!');
+          
           // After purchases have been made update database
           connection.query('UPDATE products SET ? WHERE ?', [
             { StockQuantity: (res[itemSelected].StockQuantity-quantity)},
             { ItemID: answer.itemID}
             ], function(err, res){
               if(err) throw err;
-            });
-          } else{
-            console.log('Sorry, we do not have enough of that item in our inventory to finalize your purchase.')
-          }
+              reprompt();
+              console.log('You have successfully made your purchase. Your total is $' + cartTotal + '.00. Your item(s) will be shipped within 2 business days!');
+          });
+        } else{
+          console.log('Sorry, we do not have enough of that item in our inventory to finalize your purchase.');
           reprompt();
-       }) 
-    })
+        }      
+      });
+  })
 }
 
 
 function reprompt(){
-  iquirer.prompt([{
+  inquirer.prompt([{
     type: 'confirm',
     name: 'response',
     message: 'Would you like to purchase another item?'

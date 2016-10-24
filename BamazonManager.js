@@ -96,7 +96,7 @@ function addToInventory(){
         {ProductName: ans.product}
         ], function(err, res){
           if(err) throw err;
-          console.log('The inventory was updated.');
+          console.log('The inventory has been updated.');
           start();
         });
       })
