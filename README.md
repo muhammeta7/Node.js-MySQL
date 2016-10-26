@@ -57,15 +57,15 @@ Week 12 HW for Rutgers Coding Bootcamp. The goal was to create an Amazon-like st
 
 ## Demo Images
 
-* BamazonCustomer.js 
+1. BamazonCustomer.js 
   *![Image1](/images/Customer1.PNG)
   *![Image2](/images/Customer2.PNG)
   *![Image3](/images/Customer3.PNG)
   *![Image4](/images/Customer4.PNG)
 
-* BamazonManager.js 
+2. BamazonManager.js 
 
-* ExecutiveManager.js 
+3. ExecutiveManager.js 
 
 ## Technologies used
 - Node.js
