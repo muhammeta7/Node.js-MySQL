@@ -24,7 +24,7 @@ function start(){
     } else if (answer.menu == 'Add to Inventory'){
       addToInventory();
     } else if (answer.menu == 'Add New Product'){
-      addNewProducts();
+      addNewProduct();
     } else{
       console.log('Until Next Time!')
     }
