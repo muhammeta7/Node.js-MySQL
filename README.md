@@ -55,13 +55,13 @@ Week 12 HW for Rutgers Coding Bootcamp. The goal was to create an Amazon-like st
 
     * If the manager selects `End Session`, it ends the session and doesn't go back to the menu.
 
-## Demo Videos
+## Demo Images
 
 * BamazonCustomer.js 
-![Image1](images/Customer1.png)
-![Image2](images/Customer2.png)
-![Image3](images/Customer3.png)
-![Image4](images/Customer4.png)
+![Image1](/images/Customer1.png)
+![Image2](/images/Customer2.png)
+![Image3](/images/Customer3.png)
+![Image4](/images/Customer4.png)
 
 * BamazonManager.js 
 
