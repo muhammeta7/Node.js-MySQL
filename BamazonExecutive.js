@@ -26,7 +26,6 @@ function start(){
       case 'Create New Department' : createNewDepartment();
       break;
       case 'End Session' : console.log('Have a Great Day!');
-      default: console.log('Pick an Action!');
     }
   });
 }
@@ -37,7 +36,7 @@ function viewProductByDepartment(){
     if (err) throw err;
     console.log('-------------------Product Sales By Department------------------');
     for (var i = 0; i < res.length; i++){
-      console.log("Department ID: 0" + res[i].DepartmentID + " | " + "Department Name: " + res[i].DepartmentName + " | " + "Over Head Cost: " + (res[i].OverHeadCosts).toFixed(2) + " | " + "Product Sales: " + (res[i].TotalSales).toFixed(2) + " | " + "Total Profit: " + (res[i].TotalSales - res[i].OverHeadCosts).toFixed(2));
+      console.log("DepID: 0" + res[i].DepartmentID + " | " + "DepName: " + res[i].DepartmentName + " | " + "OverHeadCost: " + (res[i].OverHeadCosts).toFixed(2) + "| TotalProfits: " + (res[i].TotalProfit - res[i].OverHeadCosts).toFixed(2));
       console.log('------------------------------------------------------------------------------------------');
     }
     start();
@@ -75,7 +74,7 @@ function createNewDepartment(){
     connection.query('INSERT INTO departments SET ?',{
       DepartmentName: answer.name,
       OverHeadCosts: answer.overHeadCosts,
-      TotalSales: answer.productSales
+      TotalProfit: answer.productSales
     }, function(err, res){
       if(err) throw err;
       console.log(answer.name + 'department was added.');

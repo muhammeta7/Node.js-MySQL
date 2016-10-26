@@ -64,10 +64,8 @@ Week 12 HW for Rutgers Coding Bootcamp. The goal was to create an Amazon-like st
   * ![4](/images/Customer4.PNG)
 
 ### BamazonManager.js 
-  * ![1](/images/Manager1.PNG)
-  * ![2](/images/Manager2.PNG)
-  * ![3](/images/Manager3.PNG)
-  * ![4](/images/Manager4.PNG)
+  * ![1](/images/Manager3.PNG)
+  * ![2](/images/Manager4.PNG)
 
 ### ExecutiveManager.js 
 
