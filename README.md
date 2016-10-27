@@ -71,7 +71,6 @@ Week 12 HW for Rutgers Coding Bootcamp. The goal was to create an Amazon-like st
 
 ### ExecutiveManager.js 
   * ![1](/images/Executive1.PNG)
-  * ![2](/images/Executive2.PNG)
 
 ## Technologies used
 - Node.js
